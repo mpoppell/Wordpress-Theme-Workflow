@@ -1,0 +1,33 @@
+
+
+$primary-font: 'Source Sans Pro', sans-serif;
+$title-font: 'PT Sans', sans-serif;
+// Colours
+
+$primary: #EE1B2E;
+$secondary: #AD232F;;
+$tertiary: blue;
+
+$body-bg: #f8f8f8;;
+$body-fg: #444;
+$main-bg: $body-bg;
+$main-fg: $body-fg;
+$header-bg: #fff;
+$header-fg: #333;
+$footer-bg: #252525;
+$footer-fg: #ccc;
+$bottom-bg: #1c1c1c;
+$bottom-fg: #777;
+$default-border: #ddd;
+
+$hpad: 30px;
+$vpad: 30px;
+
+$image-border-radius: 0;
+
+$page-width: 1250px;
+
+$break-desktop: $page-width;
+$break-medium:  800px;
+$break-small:   480px;
+$break-tiny:    360px;
