@@ -4,21 +4,25 @@ $primary-font: 'Source Sans Pro', sans-serif;
 $title-font: 'PT Sans', sans-serif;
 // Colours
 
-$primary: #EE1B2E;
-$secondary: #AD232F;;
-$tertiary: blue;
+$primary: #4285F4;
+$secondary: #fafafa;;
+$tertiary: #666;
+$primary-gradient: linear-gradient(#2567d5, #4285F4);
+$dark-gradient: linear-gradient(#333, #444);
 
-$body-bg: #f8f8f8;;
-$body-fg: #444;
+$body-bg: $secondary;
+$body-fg: $tertiary;
 $main-bg: $body-bg;
 $main-fg: $body-fg;
-$header-bg: #fff;
-$header-fg: #333;
+$header-bg: $primary;
+$header-bg-grad: $primary-gradient;
+$header-fg: $secondary;
 $footer-bg: #252525;
 $footer-fg: #ccc;
 $bottom-bg: #1c1c1c;
 $bottom-fg: #777;
 $default-border: #ddd;
+$default-shadow: 3px 6px 15px -3px rgba(0, 0, 0, 0.2);
 
 $hpad: 30px;
 $vpad: 30px;
@@ -28,6 +32,10 @@ $image-border-radius: 0;
 $page-width: 1250px;
 
 $break-desktop: $page-width;
+$break-large:   1000px;
 $break-medium:  800px;
 $break-small:   480px;
 $break-tiny:    360px;
+
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';

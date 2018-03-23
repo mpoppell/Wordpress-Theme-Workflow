@@ -1,0 +1,91 @@
+
+#masthead {
+  background-color: $header-bg;
+  background: $header-bg-grad;
+  color: $header-fg;
+  box-shadow: $default-shadow;
+  position: relative;
+  .site-branding {
+    float: left;
+    .site-title {
+      text-align: center;
+      margin-top: 3rem;
+      a {
+        &:visited {
+          color: $header-fg; 
+        }
+        
+        font-size: 3rem;
+    
+        text-decoration: none;
+      }
+    }
+    .site-description {
+      text-align: center;
+    }
+  }
+  nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   .menu-primary-container {
+     // border-bottom: 1px dashed $header-fg;
+      ul {
+        // background: $header-fg;
+        display: flex;
+        justify-content: center;
+        li {
+          font-size: 1.1rem;          
+          a {
+            padding: 1rem 2rem;
+            transition:all 0.3s ease;
+            
+            box-shadow: none;
+            &:hover {
+              background: rgba(0,0,0,.05);
+              box-shadow: inset $default-shadow;
+              text-decoration: none;
+            }
+          }
+          &.current-menu-item {
+            text-decoration: none;
+            color: $header-bg;
+            background: $header-fg;
+            border-bottom-width: 0;
+            position: relative;
+            z-index: 1;
+            a {
+              margin-bottom: -1rem;
+              height: 4rem;
+              box-shadow: inset $default-shadow;
+              text-decoration: none;
+              &:hover {
+                background: rgba(0,0,0,.0);
+              }
+            }
+            &:before {
+              content: '';
+              height: 2rem;
+              display: inline-block;
+              width: 100%;
+              position: absolute;
+              margin-top: 3.6rem;
+              background: $body-bg !important;
+              box-shadow: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.entry-header {
+  .entry-title {
+    padding: 2rem;
+    width: $page-width;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

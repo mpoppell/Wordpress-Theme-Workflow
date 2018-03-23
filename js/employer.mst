@@ -1,0 +1,45 @@
+<div class="cv-container">
+  {{#employers}}
+    <div class="employer">
+      <div class="short-info">
+        <h2 class="position">{{position}}</h2>
+        
+        {{#yearfrom}}
+          <span class="yearfrom">{{.}}</span>
+        {{/yearfrom}} - 
+        {{#yearto}}
+          <span class="yearto">{{.}}</span>
+        {{/yearto}}
+        
+        <h3><a class="{{company}}" href="{{link}}">{{company}}</a></h3>
+
+        {{#businesstype}}
+          <span class="company-description">{{.}} based in </span>
+        {{/businesstype}}
+
+        {{#location}}
+          <span>{{.}}</br></span>
+        {{/location}}
+
+      </div>
+      <div class="extended-info">
+        {{#responsibilities}}
+          <h3>Responsibilities</h3>
+          <ul>
+            {{#items}}
+              <li class="{{tags}}">{{text}}</li>
+            {{/items}}
+          </ul>
+        {{/responsibilities}}
+        {{#achievements}}
+          <h3>Achievements</h3>
+          <ul>
+            {{#items}}
+              <li class="{{tags}}">{{text}}</li>
+            {{/items}}
+          </ul>
+        {{/achievements}}
+        </div>
+    </div>
+  {{/employers}}
+</div>

@@ -1,0 +1,30 @@
+.site-footer  {
+  background-color: $footer-bg;
+  background: $dark-gradient;
+  color: $footer-fg;
+  .content-footer {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    &.footer-main {
+      padding-top: 2rem;
+      .footer-row {
+        display: flex;
+        justify-content: center;
+        .footer-widget {
+          padding: 2rem;
+          width: 100%;
+    
+        }
+      }
+    }
+  
+    &.site-info {
+      padding-top: .6rem;
+      padding-bottom: .6rem;
+      background: #222;
+    }
+  }
+}

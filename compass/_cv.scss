@@ -1,0 +1,16 @@
+.cv-container {
+  .employer {
+    .short-info {
+      float: left;
+      h2.position {
+        margin-bottom: 0;
+      }
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+    .extended-info { 
+      float: left;
+    }
+  }
+}

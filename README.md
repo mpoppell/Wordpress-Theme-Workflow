@@ -1,4 +1,4 @@
-# Wordpress Theme Compass Workflow
+# Wordpress Workflow
 
 A package for quick implementation into new wordpress builds.
 
