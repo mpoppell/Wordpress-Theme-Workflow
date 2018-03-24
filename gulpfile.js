@@ -3,7 +3,7 @@
 var gulp = require('gulp')
 var log = require('fancy-log')
 var concat = require('gulp-concat')
-var compass = require('gulp-compass')
+var sass = require('gulp-sass')
 var browserify = require('gulp-browserify')
 // var livereload = require('gulp-livereload')
 // var gulpif = require('gulp-if')
@@ -16,8 +16,8 @@ var cleanCSS = require('gulp-clean-css')
 var themeDirectory = '../themes/underscores-child/'
 var sources =
   {
-    'sass': 'compass/*.scss',
-    'js': ['js/mustache.js'],
+    'sass': 'sass/*.scss',
+    'js': ['js/mustache.js', 'js/require.js'],
     'json': ['js/data.json'],
     'php': [themeDirectory + '*.php'],
     'css': [themeDirectory + '*.css'],
@@ -28,10 +28,11 @@ var sources =
 var paths =
   {
     'sassDist': themeDirectory,
+    'sassDev': '.',
     'jsDev': 'js/',
     'jsDist': themeDirectory + 'js/',
     'mustache': themeDirectory + 'js/',
-    'bootstrapDev': 'compass/bootstrap/'
+    'bootstrapDev': 'sass/bootstrap/'
   }
 var watching = {
   'sass': sources.sass,
@@ -43,15 +44,6 @@ var watching = {
   'mustache': ['js/employer.mst']
 }
 
-var sassStyle
-var env = process.env.NODE_ENV || 'development'
-
-if (env === 'development') {
-  sassStyle = 'expanded'
-} else {
-  sassStyle = 'compressed'
-}
-
 gulp.task('browser-sync', function () {
   browserSync.init({
     proxy: 'localhost'
@@ -59,15 +51,10 @@ gulp.task('browser-sync', function () {
   log('BrowserSync Initiated')
 })
 
-gulp.task('compass', function () {
+gulp.task('sass', function () {
   return gulp.src(sources.sass)
-    .pipe(compass({
-      sass: 'compass',
-      css: '',
-      style: sassStyle,
-      comments: true
-    }))
-    // .on('error', log('error'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(paths.sassDev))
     .pipe(cleanCSS())
     .pipe(gulp.dest(paths.sassDist))
     .pipe(browserSync.stream())
@@ -117,7 +104,7 @@ gulp.task('html', function (done) {
 })
 
 gulp.task('watch', function (done) {
-  gulp.watch(watching.sass, gulp.parallel('compass'))
+  gulp.watch(watching.sass, gulp.parallel('sass'))
   gulp.watch(watching.js, gulp.parallel('js'))
   gulp.watch(watching.json, gulp.parallel('json'))
   gulp.watch(watching.css, gulp.parallel('css'))
@@ -129,7 +116,7 @@ gulp.task('watch', function (done) {
 
 gulp.task('default', gulp.parallel(
   'browser-sync',
-  'compass',
+  'sass',
   'js',
   'json',
   'mustache',
