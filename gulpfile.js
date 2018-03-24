@@ -5,7 +5,6 @@ var log = require('fancy-log')
 var concat = require('gulp-concat')
 var sass = require('gulp-sass')
 var browserify = require('gulp-browserify')
-// var livereload = require('gulp-livereload')
 // var gulpif = require('gulp-if')
 // var babelMinify = require('gulp-babel-minify')
 var jsminify = require('gulp-uglify')
@@ -17,7 +16,7 @@ var themeDirectory = '../themes/underscores-child/'
 var sources =
   {
     'sass': 'sass/*.scss',
-    'js': ['js/mustache.js', 'js/require.js'],
+    'js': ['js/mustache.js'],
     'json': ['js/data.json'],
     'php': [themeDirectory + '*.php'],
     'css': [themeDirectory + '*.css'],
