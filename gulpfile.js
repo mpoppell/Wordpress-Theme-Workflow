@@ -16,11 +16,11 @@ var themeDirectory = '../themes/underscores-child/'
 var sources =
   {
     'sass': 'sass/*.scss',
-    'js': ['js/mustache.js'],
+    'js': ['js/handlebars.js'],
     'json': ['js/data.json'],
     'php': [themeDirectory + '*.php'],
     'css': [themeDirectory + '*.css'],
-    'mustache': ['js/employer.mst'],
+    'handlebars': ['js/employer.hbs'],
     'bootstrapPackageScss': 'node_modules/bootstrap/scss/**',
     'bootstrapPackageJs': 'node_modules/bootstrap/dist/js/bootstrap.min.js'
   }
@@ -28,9 +28,9 @@ var paths =
   {
     'sassDist': themeDirectory,
     'sassDev': '.',
-    'jsDev': 'js/',
+    'jsDev': '.',
     'jsDist': themeDirectory + 'js/',
-    'mustache': themeDirectory + 'js/',
+    'handlebars': themeDirectory + 'js/',
     'bootstrapDev': 'sass/bootstrap/'
   }
 var watching = {
@@ -40,7 +40,7 @@ var watching = {
   'css': [themeDirectory + 'style.css', themeDirectory + 'sass.css'],
   'php': [themeDirectory + 'functions.php'],
   'html': ['js/test.html', 'js/index.html'],
-  'mustache': ['js/employer.mst']
+  'handlebars': ['js/employer.hbs']
 }
 
 gulp.task('browser-sync', function () {
@@ -81,9 +81,9 @@ gulp.task('json', function () {
     .pipe(browserSync.stream())
 })
 
-gulp.task('mustache', function () {
-  return gulp.src(sources.mustache)
-    .pipe(gulp.dest(paths.mustache))
+gulp.task('handlebars', function () {
+  return gulp.src(sources.handlebars)
+    .pipe(gulp.dest(paths.handlebars))
     .pipe(browserSync.stream())
 })
 
@@ -109,7 +109,7 @@ gulp.task('watch', function (done) {
   gulp.watch(watching.css, gulp.parallel('css'))
   gulp.watch(watching.php, gulp.parallel('php'))
   gulp.watch(watching.html, gulp.parallel('html'))
-  gulp.watch(watching.mustache, gulp.parallel('mustache'))
+  gulp.watch(watching.handlebars, gulp.parallel('handlebars'))
   done()
 })
 
@@ -118,7 +118,7 @@ gulp.task('default', gulp.parallel(
   'sass',
   'js',
   'json',
-  'mustache',
+  'handlebars',
   'css',
   'php',
   'html',

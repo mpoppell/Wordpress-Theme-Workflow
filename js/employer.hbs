@@ -1,12 +1,15 @@
 <div class="cv-container">
-  {{#employers}}
+  {{#each employers}}
     <div class="employer">
       <div class="short-info">
         <h2 class="position">{{position}}</h2>
         
         {{#yearfrom}}
           <span class="yearfrom">{{.}}</span>
-        {{/yearfrom}} - 
+        {{/yearfrom}}
+        {{#if yearfrom && yearto}}
+         - 
+        {{/if}}
         {{#yearto}}
           <span class="yearto">{{.}}</span>
         {{/yearto}}
