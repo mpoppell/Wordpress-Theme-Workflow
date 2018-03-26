@@ -46,22 +46,6 @@ License: Copyright 2018. All Rights Reserved.
 body {
   background-color: $body-bg;
   color: $body-fg;
-  div#content {
-
-    #primary {
-
-    }
-  }
-  &.page-template-pagesidebar{
-    div#content {
-      #primary {
-
-      }
-      #secondary {
-
-      }
-    }
-  }
 }
 
 // .vertical {

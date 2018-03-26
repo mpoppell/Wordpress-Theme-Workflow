@@ -19,7 +19,7 @@ var sources =
     'sass': 'sass/*.scss',
     'js': ['js/handlebars.js'],
     'json': ['js/data.json'],
-    'php': [themeDirectory + '*.php'],
+    'phpDev': ['themes/*.php'],
     'css': [themeDirectory + '*.css'],
     'handlebars': ['js/templates/*.hbs'],
     'bootstrapPackageScss': 'node_modules/bootstrap/scss/**',
@@ -32,15 +32,15 @@ var paths =
     'jsDev': '.',
     'jsDist': themeDirectory + 'js/',
     'handlebars': themeDirectory + 'js/',
-    'bootstrapDev': 'sass/bootstrap/'
+    'bootstrapDev': 'sass/bootstrap/',
+    'phpDist': themeDirectory
   }
 var watching = {
   'sass': sources.sass,
   'js': ['js/handlebars.js'],
   'json': ['js/*.json'],
   'css': [themeDirectory + 'style.css', themeDirectory + 'sass.css'],
-  'php': [
-    themeDirectory + '*.php'],
+  'php': [sources.phpDev],
   'html': ['js/test.html', 'js/index.html'],
   'handlebars': ['js/templates/*.hbs']
 }
@@ -99,7 +99,9 @@ gulp.task('css', function () {
 })
 
 gulp.task('php', function (done) {
-  browserSync.reload()
+  return gulp.src(sources.phpDev)
+  .pipe(gulp.dest(paths.phpDist))
+  .pipe(browserSync.stream())
   done()
 })
 
@@ -108,7 +110,7 @@ gulp.task('html', function (done) {
   done()
 })
 
-gulp.task('watch', function (done) {
+gulp.task('watch', gulp.parallel('browser-sync', function (done) {
   gulp.watch(watching.sass, gulp.parallel('sass'))
   gulp.watch(watching.js, gulp.parallel('js'))
   gulp.watch(watching.json, gulp.parallel('json'))
@@ -117,10 +119,10 @@ gulp.task('watch', function (done) {
   gulp.watch(watching.html, gulp.parallel('html'))
   gulp.watch(watching.handlebars, gulp.parallel('handlebars'))
   done()
-})
+}))
 
 gulp.task('default', gulp.parallel(
-  'browser-sync',
+  // 'browser-sync',
   'sass',
   'js',
   'json',
