@@ -2,7 +2,7 @@
     {
       "company":"Zonkey Solutions",
       "position":"Web Developer",
-      "link":"www.zonkey.co.uk",
+      "link":"http://www.zonkey.co.uk",
       "location":"Bath, UK",
       "businesstype":"Digital Agency",
       "yearfrom": 2014,
@@ -36,6 +36,51 @@
           {
             "tags": "project-management development",
             "text": "Manage and develop a range of projects through all stages of the development lifecycle"
+          }
+        ]
+      }
+    },
+    {
+      "company":"Cubox",
+      "position":"Web Administrator",
+      "link":"http://www.cubox.com.au",
+      "location":"Brisbane, AU",
+      "businesstype":"eCommerce",
+      "yearfrom": 2013,
+      "yearto": 2014, 
+      "responsibilities": {
+        "items": [
+          {
+            "tags": "webdev frontend eCommerce management",
+            "text": "Manage our online presence, including social media, an Ecommerce website and multiple ebay stores"
+          },
+          {
+            "tags": "management retail stock",
+            "text": "Stock management and product placement for our retail store"
+          },
+          {
+            "tags": "customer service",
+            "text": "Primary contact for our customers and select suppliers"
+          }
+        ]
+      },
+      "achievements": {
+        "items": [
+          {
+            "tags": "excel bpm automation",
+            "text": "Automated processes to reduce data entry time by over 90%"
+          },
+          {
+            "tags": "hardware",
+            "text": "Design & Implement a flight simulator installation"
+          },
+          {
+            "tags": "project-management website",
+            "text": "Managed an outsourced website development team through redevelopment of our website"
+          },
+          {
+            "tags": "social-media",
+            "text": "Managed social media accounts, increasing reach by over 250% with no increase in budget"
           }
         ]
       }
