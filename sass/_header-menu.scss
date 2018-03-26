@@ -42,12 +42,6 @@
       .menu-toggle {
         box-shadow: inset $default-shadow;
       }
-      .menu-primary-container {
-        ul {
-          li {
-          }
-        }
-      }
     }
   
   @include media-breakpoint-up(sm) { 
