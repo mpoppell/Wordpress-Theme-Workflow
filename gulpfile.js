@@ -9,7 +9,7 @@ var browserify = require('gulp-browserify')
 // var babelMinify = require('gulp-babel-minify')
 var jsminify = require('gulp-uglify')
 var jsonminify = require('gulp-jsonminify')
-var handlebars = require('gulp-handlebars')
+// var handlebars = require('gulp-handlebars')
 var browserSync = require('browser-sync').create()
 var cleanCSS = require('gulp-clean-css')
 
@@ -39,7 +39,8 @@ var watching = {
   'js': ['js/handlebars.js'],
   'json': ['js/*.json'],
   'css': [themeDirectory + 'style.css', themeDirectory + 'sass.css'],
-  'php': [themeDirectory + 'functions.php'],
+  'php': [
+    themeDirectory + '*.php'],
   'html': ['js/test.html', 'js/index.html'],
   'handlebars': ['js/templates/*.hbs']
 }
@@ -53,7 +54,7 @@ gulp.task('browser-sync', function () {
 
 gulp.task('sass', function () {
   return gulp.src(sources.sass)
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({sourceComments: true}).on('error', sass.logError))
     .pipe(gulp.dest(paths.sassDev))
     .pipe(cleanCSS())
     .pipe(gulp.dest(paths.sassDist))
@@ -84,10 +85,11 @@ gulp.task('json', function () {
 
 gulp.task('handlebars', function () {
   return gulp.src(sources.handlebars)
-    .pipe(handlebars())
-    .pipe(concat('templates.js'))
-    .pipe(jsonminify())
     .pipe(gulp.dest(paths.handlebars))
+    // .pipe(handlebars())
+    // .pipe(concat('templates.js'))
+    // .pipe(jsonminify())
+    // .pipe(gulp.dest(paths.handlebars))
     .pipe(browserSync.stream())
 })
 

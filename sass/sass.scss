@@ -18,10 +18,18 @@ License: Copyright 2018. All Rights Reserved.
 @import "picture-link-bar";
 //@import "header-center";
 */
-@import "bootstrap/bootstrap";
+// @import "bootstrap/bootstrap";
+
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/bootstrap-reboot";
+// @import "bootstrap/normalize";
+@import "bootstrap/type";
+
 @import "variables";
 @import "mixins";
+@import "base-reset";
 @import "header";
+@import "header-menu";
 @import "footer";
 @import "cv";
 //@import "zonkey-recent";
@@ -39,24 +47,18 @@ body {
   background-color: $body-bg;
   color: $body-fg;
   div#content {
-    width: $page-width;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+
     #primary {
-      padding: 2rem;
+
     }
   }
   &.page-template-pagesidebar{
     div#content {
       #primary {
-        width: 75%;
-        float: left;
+
       }
       #secondary {
-        width: 25%;
-        float: left;
-        padding: 2rem;
+
       }
     }
   }
