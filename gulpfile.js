@@ -9,9 +9,11 @@ var browserify = require('gulp-browserify')
 // var babelMinify = require('gulp-babel-minify')
 var jsminify = require('gulp-uglify')
 var jsonminify = require('gulp-jsonminify')
-// var handlebars = require('gulp-handlebars')
+var handlebars = require('gulp-handlebars')
 var browserSync = require('browser-sync').create()
 var cleanCSS = require('gulp-clean-css')
+var wrap = require('gulp-wrap')
+var declare = require('gulp-declare')
 
 var themeDirectory = '../themes/underscores-child/'
 var sources =
@@ -86,10 +88,14 @@ gulp.task('json', function () {
 gulp.task('handlebars', function () {
   return gulp.src(sources.handlebars)
     .pipe(gulp.dest(paths.handlebars))
-    // .pipe(handlebars())
-    // .pipe(concat('templates.js'))
-    // .pipe(jsonminify())
-    // .pipe(gulp.dest(paths.handlebars))
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.template(<%= contents %>)'))
+    .pipe(declare({
+      namespace: 'MyApp.templates',
+      noRedeclare: true // Avoid duplicate declarations
+    }))
+    .pipe(concat('templates.js'))
+    .pipe(gulp.dest(paths.handlebars))
     .pipe(browserSync.stream())
 })
 
@@ -98,11 +104,10 @@ gulp.task('css', function () {
   .pipe(browserSync.stream())
 })
 
-gulp.task('php', function (done) {
+gulp.task('php', function () {
   return gulp.src(sources.phpDev)
   .pipe(gulp.dest(paths.phpDist))
   .pipe(browserSync.stream())
-  done()
 })
 
 gulp.task('html', function (done) {

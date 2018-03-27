@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -27,7 +26,7 @@
 	<header id="masthead" class="site-header container-fluid ">
 		<div class="container">
 		<div class="row align-items-end">
-			<div class="site-branding col-lg-4">
+			<div class="site-branding col-xl-4">
 				<?php
 				the_custom_logo();
 				if ( is_front_page() && is_home() ) :
@@ -57,7 +56,7 @@
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				  'menu_class'        => 'menu nav-menu d-sm-flex justify-content-sm-center',
-				 'container_class'        => 'menu-primary-container menu-container d-sm-block d-lg-inline-block',
+				 'container_class'        => 'menu-primary-container menu-container d-sm-block d-xl-inline-block',
 				) );
 				?>
 		
