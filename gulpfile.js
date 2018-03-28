@@ -20,7 +20,7 @@ var sources =
   {
     'sass': 'sass/*.scss',
     'js': ['js/handlebars.js'],
-    'json': ['js/data.json'],
+    'json': ['js/employers.json', 'js/keyDict.json'],
     'phpDev': ['themes/*.php'],
     'css': [themeDirectory + '*.css'],
     'handlebars': ['js/templates/*.hbs'],

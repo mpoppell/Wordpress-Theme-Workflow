@@ -1,0 +1,33 @@
+{ 
+  "employers" : 
+  [
+    {
+      "company":"Zonkey Solutions",
+      "class": "zonkey",
+      "position":"Web Developer",
+      "link":"http://www.zonkey.co.uk",
+      "location":"Bath, UK",
+      "businesstype":"Digital Agency",
+      "yearfrom": 2014,
+      "yearto": 2016, 
+      "responsibilities": 
+      {
+        "items": 
+        [
+          {
+            "tags": "webdev frontend design communication",
+            "text": "Design & develop appealing websites of various functionalities using a mixture of CSS, SASS, HTML, PHP & Javascript with a focus on UI & UX"
+          },
+          {
+            "tags": "account-management project-management client-facing communication",
+            "text": "Facilitating relationships with clients and account managers to define and scope out project objectives to achieve clients' goals"
+          },
+          {
+            "tags": "project-management development",
+            "text": "Manage and develop a range of projects through all stages of the development lifecycle"
+          }
+        ]
+      }
+    }
+  ]
+}

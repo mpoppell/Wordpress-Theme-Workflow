@@ -1,6 +1,11 @@
 <div class="cv-container">
+  <div class="col-md-3">
+    {{#employers}}{{#responsibilities.items}}{{#each tags}}
+      <button class="btn btn-primary" data-class="{{@key}}">{{.}}</button>
+    {{/each}}{{/responsibilities.items}}{{/employers}}
+  </div>
   {{#employers}}
-    <div class="employer row">
+    <div class="employer row {{class}}">
       <div class="short-info col-md-4 col-xl-4">
         <div class="row">
           <div class="col-sm-6 col-md-12">
@@ -31,7 +36,7 @@
           </div> <!-- col end -->
         </div> <!-- short info row end -->
       </div>
-      <div class="extended-info col no-gutters">
+      <div class="extended-info col">
         {{#responsibilities}}
           <h5>Responsibilities</h3>
           <ul>
