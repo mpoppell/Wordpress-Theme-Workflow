@@ -47,6 +47,10 @@ License: Copyright 2018. All Rights Reserved.
 body {
   background-color: $body-bg;
   color: $body-fg;
+  & > .site {
+    flex-direction: column;
+    min-height: 97vh;
+  }
 }
 
 // .vertical {

@@ -20,7 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site row">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'popple' ); ?></a>
 
 	<header id="masthead" class="site-header container-fluid ">

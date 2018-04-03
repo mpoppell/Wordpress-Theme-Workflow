@@ -1,0 +1,10 @@
+{ 
+  "webdev": "Web Development",
+  "frontend": "Front End",
+  "design": "Design",
+  "account-management": "Account Management",
+  "project-management": "Project Management",
+  "client-facing": "Client Facing",
+  "development": "Development",
+  "communication": "Communication"
+}

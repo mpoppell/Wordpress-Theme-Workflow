@@ -1,8 +1,9 @@
 <div class="cv-container">
-  <div class="col-md-3">
-    {{#employers}}{{#responsibilities.items}}{{#each tags}}
+
+  <div id="cv-toggles" class="col-md">
+    {{!-- {{#employers}}{{#responsibilities.items}}{{#each tags}}
       <button class="btn btn-primary" data-class="{{@key}}">{{.}}</button>
-    {{/each}}{{/responsibilities.items}}{{/employers}}
+    {{/each}}{{/responsibilities.items}}{{/employers}} --}}
   </div>
   {{#employers}}
     <div class="employer row {{class}}">
