@@ -1,10 +1,16 @@
 { 
-  "webdev": "Web Development",
-  "frontend": "Front End",
-  "design": "Design",
   "account-management": "Account Management",
-  "project-management": "Project Management",
+  "automation": "Automation",
+  "bpm": "BPM",
   "client-facing": "Client Facing",
+  "communication": "Communication",
+  "design": "Design",
   "development": "Development",
-  "communication": "Communication"
+  "excel": "MS Excel",
+  "frontend": "Front End",
+  "hardware": "Hardware",
+  "project-management": "Project Management",
+  "social-media": "Social Media",
+  "webdev": "Web Development",
+  "zz": "ZZ"
 }

@@ -1,6 +1,9 @@
 .cv-container {
   .employer {
     margin-bottom: 3rem;
+    transition: 
+      max-height .3s ease-in-out, 
+      opacity .25s ease-in-out;
     .short-info {
       margin-bottom: 2rem;
       float: left;
@@ -13,28 +16,26 @@
     }
     .extended-info { 
       float: left;
-      li {
+      
+      &> div, li {
         transition: 
           max-height .3s ease-in-out, 
           opacity .25s ease-in-out;
-        max-height: 350px;
-        opacity: 100;
+ 
       }
     }
   }
   &.active {
-    .extended-info {
-      li {
+    .employer, .extended-info > div, li {
       opacity: 0;
       max-height: 0;
       // overflow: hidden;
-      
+        &[class^="toggled-"], &[class*=" toggled-"] {
+          opacity: 100;
+          max-height: 350px;
+          // overflow: inherit;
+        }
       }
-      li[class^="toggled-"], li[class*=" toggled-"] {
-        opacity: 100;
-        max-height: 350px;
-        // overflow: inherit;
-      }
-    }
+    
   }
 }

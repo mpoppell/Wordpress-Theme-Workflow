@@ -1,9 +1,6 @@
 <div class="cv-container">
 
   <div id="cv-toggles" class="col-md">
-    {{!-- {{#employers}}{{#responsibilities.items}}{{#each tags}}
-      <button class="btn btn-primary" data-class="{{@key}}">{{.}}</button>
-    {{/each}}{{/responsibilities.items}}{{/employers}} --}}
   </div>
   {{#employers}}
     <div class="employer row {{class}}">
@@ -39,20 +36,24 @@
       </div>
       <div class="extended-info col">
         {{#responsibilities}}
-          <h5>Responsibilities</h3>
-          <ul>
-            {{#items}}
-              <li class="{{tags}}">{{text}}</li>
-            {{/items}}
-          </ul>
+          <div class="responsibilities">
+            <h5>Responsibilities</h3>
+            <ul>
+              {{#items}}
+                <li class="{{tags}}">{{text}}</li>
+              {{/items}}
+            </ul>
+          </div>
         {{/responsibilities}}
         {{#achievements}}
-          <h5>Achievements</h3>
-          <ul>
-            {{#items}}
-              <li class="{{tags}}">{{text}}</li>
-            {{/items}}
-          </ul>
+          <div class="achievements">
+            <h5>Achievements</h3>
+            <ul>
+              {{#items}}
+                <li class="{{tags}}">{{text}}</li>
+              {{/items}}
+            </ul>
+          </div>
         {{/achievements}}
         </div>
     </div>

@@ -23,8 +23,24 @@
             "text": "Facilitating relationships with clients and account managers to define and scope out project objectives to achieve clients' goals"
           },
           {
-            "tags": "project-management development",
+            "tags": "project-management webdev",
             "text": "Manage and develop a range of projects through all stages of the development lifecycle"
+          },
+          {
+            "tags": "training client-facing",
+            "text": "Provide clients with training on use of CMS, third party services, online strategy and best practices"
+          },
+          {
+            "tags": "graphic-design creative-suite psd",
+            "text": "Edit various media using Adobe Creative Suite and other tools to be ready for website or marketing campaigns and content"
+          },
+          {
+            "tags": "psd webdev",
+            "text": "Convert Photoshop documents to websites"
+          },
+          {
+            "tags": "client-facing project-management account-management communication",
+            "text": "Create and maintain collaborative relationships with our clients, freelancers, graphic designers, back-end developers and marketers."
           }
         ]
       },
@@ -33,7 +49,7 @@
         "items":
         [
           {
-            "tags": "webdev frontend design zz",
+            "tags": "webdev frontend design",
             "text": "Design & develop appealing websites of various functionalities using a mixture of CSS, SASS, HTML, PHP & Javascript with a focus on UI & UX"
           },
           {
@@ -46,6 +62,52 @@
           }
         ]
       }
-    }
+    },
+    {
+      "company":"Cubox",
+      "class": "cubox",
+      "position":"Web Administrator",
+      "link":"http://www.cubox.com.au",
+      "location":"Brisbane, AU",
+      "businesstype":"eCommerce",
+      "yearfrom": 2013,
+      "yearto": 2014,
+      "responsibilities": {
+        "items": [
+          {
+            "tags": "webdev frontend eCommerce management",
+            "text": "Manage our online presence, including social media, an Ecommerce website and multiple ebay stores"
+          },
+          {
+            "tags": "management retail stock",
+            "text": "Stock management and product placement for our retail store"
+          },
+          {
+            "tags": "customer service",
+            "text": "Primary contact for our customers and select suppliers"
+          }
+        ]
+      },
+      "achievements": {
+        "items": [
+          {
+            "tags": "excel bpm automation",
+            "text": "Automated processes to reduce data entry time by over 90%"
+          },
+          {
+            "tags": "hardware",
+            "text": "Design & Implement a flight simulator installation"
+          },
+          {
+            "tags": "project-management webdev communication",
+            "text": "Managed an outsourced website development team through redevelopment of our website"
+          },
+          {
+            "tags": "social-media",
+            "text": "Managed social media accounts, increasing reach by over 250% with no increase in budget"
+          }
+        ]
+      }
+    } 
   ]
 }
