@@ -37,7 +37,7 @@ $(function () {
           var uniqEmployerTags = uniqArray(employerTags).join(' ')
           // adds classes to employer selector class
           addTagClasses(uniqEmployerTags, employerSelectorClass)
-          allTags = allTags.concat(itemTags)
+          allTags = allTags.concat(employerTags)
         }
         // removes duplicate tags and sorts alphabetically
         var uniqTags = uniqArray(allTags).sort()
