@@ -1,61 +1,63 @@
-<div class="cv-container">
+<div class="cv-container row">
 
-  <div id="cv-toggles" class="col-md">
+  <div id="cv-toggles" class="col-3">
   </div>
-  {{#employers}}
-    <div class="employer row {{class}}">
-      <div class="short-info col-md-4 col-xl-4">
-        <div class="row">
-          <div class="col-sm-6 col-md-12">
-            <h4 class="position">{{position}}</h2>
-            
-            {{#yearfrom}}
-              <span class="yearfrom">{{.}}</span>
-            {{/yearfrom}}
-            {{#if yearfrom}}
-            {{#if yearto}}
-            - 
-            {{/if}}
-            {{/if}}
-            {{#yearto}}
-              <span class="yearto">{{.}}</span>
-            {{/yearto}}
-          </div> <!-- col end -->
-          <div class="col-sm-6 col-md-12">
-            <h5><a class="{{company}}" href="{{link}}">{{company}}</a></h3>
+  <div class="col">
+    {{#employers}}
+      <div class="employer row {{class}}">
+        <div class="short-info col-md-4 col-xl-4">
+          <div class="row">
+            <div class="col-sm-6 col-md-12">
+              <h4 class="position">{{position}}</h2>
+              
+              {{#yearfrom}}
+                <span class="yearfrom">{{.}}</span>
+              {{/yearfrom}}
+              {{#if yearfrom}}
+              {{#if yearto}}
+              - 
+              {{/if}}
+              {{/if}}
+              {{#yearto}}
+                <span class="yearto">{{.}}</span>
+              {{/yearto}}
+            </div> <!-- col end -->
+            <div class="col-sm-6 col-md-12">
+              <h5><a class="{{company}}" href="{{link}}">{{company}}</a></h3>
 
-            {{#businesstype}}
-              <span class="company-description">{{.}} based in </span>
-            {{/businesstype}}
+              {{#businesstype}}
+                <span class="company-description">{{.}} based in </span>
+              {{/businesstype}}
 
-            {{#location}}
-              <span>{{.}}</br></span>
-            {{/location}}
-          </div> <!-- col end -->
-        </div> <!-- short info row end -->
-      </div>
-      <div class="extended-info col">
-        {{#responsibilities}}
-          <div class="responsibilities">
-            <h5>Responsibilities</h3>
-            <ul>
-              {{#items}}
-                <li class="{{tags}}">{{text}}</li>
-              {{/items}}
-            </ul>
-          </div>
-        {{/responsibilities}}
-        {{#achievements}}
-          <div class="achievements">
-            <h5>Achievements</h3>
-            <ul>
-              {{#items}}
-                <li class="{{tags}}">{{text}}</li>
-              {{/items}}
-            </ul>
-          </div>
-        {{/achievements}}
+              {{#location}}
+                <span>{{.}}</br></span>
+              {{/location}}
+            </div> <!-- col end -->
+          </div> <!-- short info row end -->
         </div>
-    </div>
-  {{/employers}}
+        <div class="extended-info col">
+          {{#responsibilities}}
+            <div class="responsibilities">
+              <h5>Responsibilities</h3>
+              <ul>
+                {{#items}}
+                  <li class="{{tags}}">{{text}}</li>
+                {{/items}}
+              </ul>
+            </div>
+          {{/responsibilities}}
+          {{#achievements}}
+            <div class="achievements">
+              <h5>Achievements</h3>
+              <ul>
+                {{#items}}
+                  <li class="{{tags}}">{{text}}</li>
+                {{/items}}
+              </ul>
+            </div>
+          {{/achievements}}
+          </div>
+      </div>
+    {{/employers}}
+  </div>
 </div>

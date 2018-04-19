@@ -14,6 +14,7 @@ var browserSync = require('browser-sync').create()
 var cleanCSS = require('gulp-clean-css')
 var wrap = require('gulp-wrap')
 var declare = require('gulp-declare')
+const autoprefixer = require('gulp-autoprefixer')
 
 var themeDirectory = '../themes/underscores-child/'
 var sources =
@@ -57,6 +58,10 @@ gulp.task('browser-sync', function () {
 gulp.task('sass', function () {
   return gulp.src(sources.sass)
     .pipe(sass({sourceComments: true}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest(paths.sassDev))
     .pipe(cleanCSS())
     .pipe(gulp.dest(paths.sassDist))

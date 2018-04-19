@@ -1,9 +1,11 @@
 
 var $ = require('jquery')
 
+// @todo add year filter
+
 $(function () {
-  $.getJSON('/wp-content/themes/underscores-child/js/employers.json', function (data) {
-    $.getJSON('/wp-content/themes/underscores-child/js/keyDict.json', function (dData) {
+  $.getJSON('/wordpress/wp-content/themes/underscores-child/js/employers.json', function (data) {
+    $.getJSON('/wordpress/wp-content/themes/underscores-child/js/keyDict.json', function (dData) {
     // Renders the template
       var html = MyApp.templates.employer(data)
       var dataKeys = ['responsibilities', 'achievements']
@@ -55,14 +57,14 @@ $(function () {
 
     $.each(data, function (key, value) {
       // creates the tag buttons
-      $('#cv-toggles').append('<button class="btn btn-primary ' + key +
-      '">' + value + '</button>')
+      $('#cv-toggles').append('<a href="#" class="' + key +
+      '">' + value + '</a>')
       // tag button controls
-      $('#cv-toggles button.' + key).click(function () {
+      $('#cv-toggles a.' + key).click(function () {
         // activates toggle function and edits buttons
         $('.cv-container').addClass('active')
         $('#cv-toggles button.all').removeClass('btn-success')
-        $(this).toggleClass('btn-success')
+        $(this).toggleClass('filter-on')
         // adds classes to toggleable areas
         $('.cv-container .' + key).toggleClass('toggled-' + key)
         // removes the active class if no tags are toggled
@@ -73,7 +75,7 @@ $(function () {
       })
       $('#cv-toggles button.all').click(function () {
         $(this).addClass('btn-success')
-        $('#cv-toggles button.' + key).removeClass('btn-success')
+        $('#cv-toggles a.' + key).removeClass('filter-on')
         $('.cv-container .' + key).removeClass('toggled-' + key)
         $('.cv-container').removeClass('active')
       })

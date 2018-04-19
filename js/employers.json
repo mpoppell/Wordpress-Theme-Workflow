@@ -1,6 +1,63 @@
 { 
   "employers" : 
-  [
+  [  
+    {
+    "company":"Green Hat",
+    "class": "green-hat",
+    "position":"Web Developer",
+    "link":"https://green-hat.com.au/",
+    "location":"Melbourne, AU",
+    "businesstype":"Digital Marketing Consulting Agency",
+    "yearfrom": 2018,
+    "responsibilities": 
+    {
+      "items": 
+      [
+        {
+          "tags": "webdev frontend design communication",
+          "text": "Substitute in for a senior developer halfway through a web development project"
+        },
+        {
+          "tags": "php wordpress",
+          "text": "Develop a WordPress website with a high attention to detail according to UX design"
+        },
+        {
+          "tags": "webdev wordpress",
+          "text": "Install and customise various WordPress functionalities, such as custom post types, custom fields and post-templates"
+        },
+        {
+          "tags": "wordpress",
+          "text": "Develop intuitive functional relationships between post types and custom fields for client administration and display"
+        },
+        {
+          "tags": "it-support",
+          "text": "Provide occasional IT and networking support for the office"
+        },
+        {
+          "tags": "consulting communication",
+          "text": "Provide technical consultation for Clients and the Team on various Web Strategies"
+        }
+      ]
+    },
+    "achievements":
+    {
+      "items":
+      [
+        {
+          "tags": "account-management project-management time-management client-facing",
+          "text": "Manage numerous clients & projects simultaneously under tight timelines"
+        },
+        {
+          "tags": "webdev project-management",
+          "text": "Completion of over 50 web projects in under 2 years"
+        },
+        {
+          "tags": "communication client-facing",
+          "text": "Developed meaningful relationships with colleagues and clients"
+        }
+      ]
+    }
+  },
     {
       "company":"Zonkey Solutions",
       "class": "zonkey",
@@ -31,7 +88,7 @@
             "text": "Provide clients with training on use of CMS, third party services, online strategy and best practices"
           },
           {
-            "tags": "graphic-design creative-suite psd",
+            "tags": "graphic-design psd",
             "text": "Edit various media using Adobe Creative Suite and other tools to be ready for website or marketing campaigns and content"
           },
           {
@@ -69,7 +126,7 @@
       "position":"Web Administrator",
       "link":"http://www.cubox.com.au",
       "location":"Brisbane, AU",
-      "businesstype":"eCommerce",
+      "businesstype":"eCommerce Store",
       "yearfrom": 2013,
       "yearto": 2014,
       "responsibilities": 
@@ -77,16 +134,24 @@
         "items": 
         [
           {
-            "tags": "webdev frontend eCommerce management social-media",
-            "text": "Manage our online presence, including social media, an Ecommerce website and multiple ebay stores"
+            "tags": "webdev frontend ecommerce webadmin social-media",
+            "text": "Manage our online presence, including social media, an eCommerce website and multiple ebay stores"
           },
           {
-            "tags": "management retail stock",
+            "tags": "management retail",
             "text": "Stock management and product placement for our retail store"
           },
           {
-            "tags": "customer service",
-            "text": "Primary contact for our customers and select suppliers"
+            "tags": "customer-service communication problem-solving it-support",
+            "text": "Primary contact for our customers for technical consultation and IT support"
+          },
+          {
+            "tags": "training communication it-support",
+            "text": "Provide company with IT support, training and consultation"
+          },
+          {
+            "tags": "management communication",
+            "text": "Communicate any stock issues with suppliers"
           }
         ]
       },
@@ -101,7 +166,7 @@
             "text": "Design & Implement a flight simulator installation"
           },
           {
-            "tags": "project-management webdev communication",
+            "tags": "project-management webdev communication management",
             "text": "Managed an outsourced website development team through redevelopment of our website"
           },
           {
