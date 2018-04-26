@@ -1,0 +1,45 @@
+<div id="cv-tertiaryEducation-info" class="cv-tertiaryEducation-info">
+  <h3>Education</h3>
+  {{#tertiaryEducation}}
+      <div class="cv-item education row {{class}}">
+        <div class="short-info col-md-4 col-xl-3">
+          <div class="row">
+            <div class="col-sm-6 col-md-12">
+              <h5 class="institution"><a class="{{class}}" href="{{link}}">{{institution}}</a></h5>
+              
+              {{#yearfrom}}
+                <span class="yearfrom">{{.}}</span>
+              {{/yearfrom}}
+              {{#if yearfrom}}
+                {{#if yearto}}
+                  - 
+                {{/if}}
+              {{/if}}
+              {{#yearto}}
+                <span class="yearto">{{.}}</span>
+              {{/yearto}}
+            </div> <!-- col end -->
+          </div> <!-- row end -->
+        </div> <!-- short info row end -->
+        <div class="extended-info col">
+            <div class="role-description {{tags}}">
+              <h4 class="position">{{certification}}</h4>
+          {{#description}}
+              <p>{{.}}</p>
+          {{/description}}
+            </div>
+          {{#achievements}}
+            <div class="achievements">
+              <h5>Achievements</h3>
+              <ul>
+                {{#items}}
+                  <li class="{{tags}}">{{{text}}}</li>
+                {{/items}}
+              </ul>
+            </div>
+          {{/achievements}}
+          </div>
+      </div>
+    {{/tertiaryEducation}}
+  </div>
+</div>

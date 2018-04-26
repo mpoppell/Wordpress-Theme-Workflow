@@ -1,0 +1,77 @@
+<div class="cv-container row">
+  <div id="cv-toggles" class="col-2">
+  </div>
+  <div id="cv-info" class="col">
+    <div id="cv-tertiaryEducation" class="cv-type-container tertiaryEducation"> 
+    </div>
+    <div id="cv-employers" class="cv-type-container employers"> 
+      <h3>Employment History</h3>
+      {{#employers}}
+        <div class="cv-item employer row {{class}}">
+          <div class="short-info col-md-4 col-xl-3">
+            <div class="row">
+              <div class="col-sm-6 col-md-12">
+                <h4 class="position">{{position}}</h4>
+                
+                {{#yearfrom}}
+                  <span class="yearfrom">{{.}}</span>
+                {{/yearfrom}}
+                {{#if yearfrom}}
+                {{#if yearto}}
+                - 
+                {{/if}}
+                {{/if}}
+                {{#yearto}}
+                  <span class="yearto">{{.}}</span>
+                {{/yearto}}
+              </div> <!-- col end -->
+              <div class="col-sm-6 col-md-12">
+                <h5><a class="{{company}}" href="{{link}}">{{company}}</a></h5>
+
+                {{#businesstype}}
+                  <span class="company-description">{{.}} based in </span>
+                {{/businesstype}}
+
+                {{#location}}
+                  <span>{{.}}</br></span>
+                {{/location}}
+              </div> <!-- col end -->
+            </div> <!-- short info row end -->
+          </div>
+          <div class="extended-info col">
+            {{#description}}
+              <div class="role-description">
+                <h5>Overview</h5>
+                <p>{{.}}</p>
+              </div>
+            {{/description}}
+            {{#responsibilities}}
+              <div class="responsibilities">
+                <h5>Responsibilities</h5>
+                <ul>
+                  {{#items}}
+                    <li class="{{tags}}">{{{text}}}</li>
+                  {{/items}}
+                </ul>
+              </div>
+            {{/responsibilities}}
+            {{#achievements}}
+              <div class="achievements">
+                <h5>Achievements</h3>
+                <ul>
+                  {{#items}}
+                    <li class="{{tags}}">{{{text}}}</li>
+                  {{/items}}
+                </ul>
+              </div>
+            {{/achievements}}
+            </div>
+        </div>
+      {{/employers}}
+      </div>
+    <div id="cv-community" class="cv-type-container community"> 
+    </div>  
+    <div id="cv-certifications" class="cv-type-container certifications"> 
+    </div>  
+  </div> <!-- end #cv-employer-info-->
+</div> <!-- end #cv-container-->

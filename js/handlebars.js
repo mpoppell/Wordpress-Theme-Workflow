@@ -1,59 +1,33 @@
 
 var $ = require('jquery')
 
-// @todo add year filter
+// TODO: add year filter
 
 $(function () {
   $.getJSON('/wordpress/wp-content/themes/underscores-child/js/employers.json', function (data) {
-    $.getJSON('/wordpress/wp-content/themes/underscores-child/js/keyDict.json', function (dData) {
-    // Renders the template
-      var html = MyApp.templates.employer(data)
-      var dataKeys = ['responsibilities', 'achievements']
-      $('#cv').html(html)
-    // Grabs tags from json file
+    $.getJSON('/wordpress/wp-content/themes/underscores-child/js/keyDict.json', function (keyDict) {
+      var allTags = []
       $.each(data, function (key, file) {
-        var allTags = []
-        for (var employer in file) {
-          var employerTags = []
-          // creates selector class based on current employer
-          var employerSelectorClass = '.' + file[employer].class.toString()
-          for (var dataKey in dataKeys) {
-            var objectKey = dataKeys[dataKey]
-            var itemTags = []
-            for (var itemsArray in file[employer][objectKey].items) {
-              // turns tags string into an array
-              var newTags = file[employer][objectKey].items[itemsArray].tags.split(' ')
-              // adds new tags to array
-              itemTags = itemTags.concat(newTags)
-            }
-            // creates selector class based on employer class and the datakeys
-            var tagsSelectorClass = employerSelectorClass + ' .' + objectKey
-            // creates list of all unique tags used for data key
-            var uniqItemTags = uniqArray(itemTags).join(' ')
-            addTagClasses(uniqItemTags, tagsSelectorClass)
-            // concatenates all available tags
-            employerTags = employerTags.concat(itemTags)
-          }
-
-          // removes duplicate tags and turns into string
-          var uniqEmployerTags = uniqArray(employerTags).join(' ')
-          // adds classes to employer selector class
-          addTagClasses(uniqEmployerTags, employerSelectorClass)
-          allTags = allTags.concat(employerTags)
-        }
-        // removes duplicate tags and sorts alphabetically
-        var uniqTags = uniqArray(allTags).sort()
-        // returns a key value pair object based on dictionary
-        var dictTags = tagDictionary(uniqTags, dData)
-        // creates and handles buttons
-        tagButtons(dictTags)
-      // tagDictionary(uniqArray(employerTags))
+        // Renders the template - key grabs appropriate template named after json key
+        var html = MyApp.templates[key](data)
+        $('#cv-' + key).html(html)
+        // Grabs tags from json file
+        var dataKeys = ['responsibilities', 'achievements']
+        // adds relevent classes to cv items and returns array of tags used
+        var employerTags = cvTagClassManager(file, dataKeys, key)
+        allTags = allTags.concat(employerTags)
       })
+      // removes duplicate tags and sorts alphabetically
+      var uniqTags = uniqArray(allTags).sort()
+      // returns a key value pair object based on dictionary
+      var dictTags = tagDictionary(uniqTags, keyDict)
+      // creates and handles button events based on array
+      tagButtons(dictTags)
     }) // getJSON dictionary
   }) // getJSON data
 
   function tagButtons (data) {
-    $('#cv-toggles').append('<button class="btn btn-primary btn-success all">View All</button>')
+    $('#cv-toggles').append('<button class="btn btn-primary btn-success all">No Filters</button>')
 
     $.each(data, function (key, value) {
       // creates the tag buttons
@@ -64,6 +38,7 @@ $(function () {
         // activates toggle function and edits buttons
         $('.cv-container').addClass('active')
         $('#cv-toggles button.all').removeClass('btn-success')
+        $('#cv-toggles button.all').html('Reset Filters')
         $(this).toggleClass('filter-on')
         // adds classes to toggleable areas
         $('.cv-container .' + key).toggleClass('toggled-' + key)
@@ -71,10 +46,12 @@ $(function () {
         if ($('.extended-info li[class*="toggled-"]').length === 0) {
           $('.cv-container').removeClass('active')
           $('#cv-toggles button.all').addClass('btn-success')
+          $('#cv-toggles button.all').html('No Filters')
         }
       })
       $('#cv-toggles button.all').click(function () {
         $(this).addClass('btn-success')
+        $('#cv-toggles button.all').html('No Filters')
         $('#cv-toggles a.' + key).removeClass('filter-on')
         $('.cv-container .' + key).removeClass('toggled-' + key)
         $('.cv-container').removeClass('active')
@@ -92,18 +69,62 @@ $(function () {
     $(selector).addClass(array)
   }
 
-  function tagDictionary (keyArray, dData) {
+  function tagDictionary (keyArray, keyDict) {
     var dictObj = {}
     for (var key in keyArray) {
       var dKey = keyArray[key]
-      var dValue = dData[keyArray[key]]
+      var dValue = keyDict[keyArray[key]]
       if (dValue) {
         dictObj[dKey] = dValue
-        // createTagButton(dKey, dValue)
       } else {
         console.log(dKey + ' does not have a value yet')
       }
     }
     return dictObj
+  }
+
+  function cvTagClassManager (file, dataKeys, key) {
+    var allCvTypeTags = []
+    for (var cvType in file) {
+      var cvTypeSingleTags = []
+
+      // creates selector class based on current cvType
+      var cvTypeItemSelectorClass = '.' + file[cvType].class.toString()
+      for (var dataKey in dataKeys) {
+        var objectKey = dataKeys[dataKey]
+        var itemTags = []
+        if (file[cvType][objectKey]) {
+          for (var itemsArray in file[cvType][objectKey].items) {
+            // turns tags string into an array
+            var newTags = file[cvType][objectKey].items[itemsArray].tags.split(' ')
+            // adds new tags to array
+            itemTags = itemTags.concat(newTags)
+          }
+        }
+        // creates selector class based on employer class and the datakeys
+        var tagsSelectorClass = cvTypeItemSelectorClass + ' .' + objectKey
+        // creates list of all unique tags used for data key
+        var uniqItemTags = uniqArray(itemTags).join(' ')
+        addTagClasses(uniqItemTags, tagsSelectorClass)
+        // concatenates all available tags
+        cvTypeSingleTags = cvTypeSingleTags.concat(itemTags)
+      }
+      if (file[cvType].tags) {
+        var cvItemTags = file[cvType].tags.split(' ')
+        cvTypeSingleTags = cvTypeSingleTags.concat(cvItemTags)
+      }
+      // removes duplicate tags and turns into string
+      var uniqCvTypeTags = uniqArray(cvTypeSingleTags).join(' ')
+      // adds classes to the cv types selector class
+      addTagClasses(uniqCvTypeTags, cvTypeItemSelectorClass)
+      allCvTypeTags = allCvTypeTags.concat(cvTypeSingleTags)
+    }
+    // creates class for selecting the cv typre container
+    var cvTypeSelectorClass = '.cv-type-container.' + key
+    // removes duplicate tags and turns into string
+    var uniqAllCvTypeTags = uniqArray(allCvTypeTags).join(' ')
+
+    addTagClasses(uniqAllCvTypeTags, cvTypeSelectorClass)
+    return allCvTypeTags
   }
 }) // Self Invoked function

@@ -1,0 +1,46 @@
+<div id="cv-community-info" class="">
+  <h3>Community</h3>
+  {{#community}}
+      <div class="cv-item community row {{class}}">
+        <div class="short-info col-md-4 col-xl-3">
+          <div class="row">
+            <div class="col-sm-6 col-md-12">
+              <h5 class="organisation"><a class="{{class}}" href="{{link}}">{{organisation}}</a></h5>
+              
+              {{#yearfrom}}
+                <span class="yearfrom">{{.}}</span>
+              {{/yearfrom}}
+              {{#if yearfrom}}
+                {{#if yearto}}
+                  - 
+                {{/if}}
+              {{/if}}
+              {{#yearto}}
+                <span class="yearto">{{.}}</span>
+              {{/yearto}}
+            </div> <!-- col end -->
+
+          </div> <!-- short info row end -->
+        </div>
+        <div class="extended-info col">
+          {{#description}}
+            <div class="role-description">
+              <h5>Overview</h5>
+              <p>{{.}}</p>
+            </div>
+          {{/description}}
+          {{#achievements}}
+            <div class="achievements">
+              <h5>Achievements</h3>
+              <ul>
+                {{#items}}
+                  <li class="{{tags}}">{{{text}}}</li>
+                {{/items}}
+              </ul>
+            </div>
+          {{/achievements}}
+          </div>
+      </div>
+    {{/community}}
+  </div>
+</div>

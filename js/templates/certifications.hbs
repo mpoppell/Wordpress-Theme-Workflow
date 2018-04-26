@@ -1,0 +1,25 @@
+<div id="cv-certification-info" class="cv-certification-info">
+  <h3>Certificates</h3>
+  {{#certifications}}
+      <div class="cv-item certification row {{class}}">
+        <div class="short-info col-md-4 col-xl-3">
+          <div class="row">
+            <div class="col-sm-6 col-md-12">
+              <h5 class="institution"><a class="{{class}}" href="{{link}}">{{institution}}</a></h5>
+              {{#year}}
+                <span class="year">{{.}}</span>
+              {{/year}}
+            </div> <!-- col end -->
+          </div> <!-- row end -->
+        </div> <!-- short info row end -->
+        <div class="extended-info col">
+              <ul>
+                {{#certifications}}
+                  <li class="">{{.}}</li>
+                {{/certifications}}
+              </ul>
+          </div>
+      </div>
+    {{/certifications}}
+  </div>
+</div>
