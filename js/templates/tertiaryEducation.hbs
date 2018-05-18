@@ -6,7 +6,6 @@
           <div class="row">
             <div class="col-sm-6 col-md-12">
               <h5 class="institution"><a class="{{class}}" href="{{link}}">{{institution}}</a></h5>
-              
               {{#yearfrom}}
                 <span class="yearfrom">{{.}}</span>
               {{/yearfrom}}
@@ -23,21 +22,11 @@
         </div> <!-- short info row end -->
         <div class="extended-info col">
             <div class="role-description {{tags}}">
-              <h4 class="position">{{certification}}</h4>
+              <h4 class="position">{{{certification}}}</h4>
           {{#description}}
-              <p>{{.}}</p>
-          {{/description}}
+              <p>{{{.}}}</p>
+            {{/description}}
             </div>
-          {{#achievements}}
-            <div class="achievements">
-              <h5>Achievements</h3>
-              <ul>
-                {{#items}}
-                  <li class="{{tags}}">{{{text}}}</li>
-                {{/items}}
-              </ul>
-            </div>
-          {{/achievements}}
           </div>
       </div>
     {{/tertiaryEducation}}

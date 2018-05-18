@@ -18,6 +18,10 @@
           "text": "Substitute in for a senior developer halfway through a <span class=\"emphasize\">web development project</span>"
         },
         {
+          "tags": "design copy editing communication",
+          "text": "<span class=\"emphasize\">Source and edit written and media content</span> for online distribution"
+        },
+        {
           "tags": "php wordpress it",
           "text": "<span class=\"emphasize\">Develop a WordPress website</span> with a high attention to detail according to UX design"
         },
@@ -32,6 +36,10 @@
         {
           "tags": "it-support it",
           "text": "Provide occasional <span class=\"emphasize\">IT and networking support</span> for the office"
+        },
+        {
+          "tags": "data-entry msexcel it administration",
+          "text": "Data entry of various content from excel to website"
         },
         {
           "tags": "consulting communication",
@@ -62,7 +70,7 @@
     "location":"Europe & Africa",
     "businesstype":"Adventurer",
     "yearfrom": 2017,
-    "description": "At the end of my working holiday Visa in Ireland, I spent 4 months exploring areas of Europe that I had not yet had the chance to. I travelled with my partner through the Balkans, Eastern Europe, Mediterranean Islands and Latin Europe with a quick stop in Morocco, experiencing a wide variety of cultures, histories and natural beauty along the way. This was a wonderful opportunity to learn more about the world and myself that I will never forget.",
+    "description": "At the end of my working holiday Visa in Ireland, I spent 4 months exploring areas of Europe that I had not yet had the chance to. I travelled with my partner through the Balkans, Eastern Europe, Mediterranean Islands and Latin Europe with a quick stop in Morocco, <span class=\"emphasize\">experiencing a wide variety of cultures, histories and natural beauty</span> along the way. This was a wonderful opportunity to learn more about the world and myself that I will never forget.",
     "responsibilities": 
     {
       "items": 
@@ -92,26 +100,30 @@
     "location":"Dublin, Ireland",
     "businesstype":"Subcontractor",
     "yearfrom": 2017,
-    "description": "After my Visa ended in the UK I moved to Dublin, where I worked in temporary positions for various recruitment agencies such as Reed, Hays, Hall, Excel and CPL. I assisted various companies and individuals in a multitude of ways, from support administration for an Anti-Money Laundering and Anti-Terrorist Financing team (6 Months) to acting as a personal assistant for an Artist (2 Weeks).",
+    "description": "After my Visa ended in the UK I moved to Dublin, where I worked in temporary positions for various recruitment agencies such as Reed, Hays, Hall, Excel and CPL. I assisted various companies and individuals in a multitude of ways, from <span class=\"emphasize\">support administration for Anti-Money Laundering and Anti-Terrorist Financing teams</span> (6 Months) to acting as a <span class=\"emphasize\">personal assistant for an Artist</span> (2 Weeks).",
     "responsibilities": 
     {
       "items": 
       [
         {
           "tags": "it-support communication it",
-          "text": "Assist individuals and teams navigating technical processes and software"
+          "text": "Assist individuals and teams navigating <span class=\"emphasize\">technical processes and software</span>"
         },
         {
           "tags": "organisation administration communication",
-          "text": "Support Underwriting and Anti-money-laundering & Counter-terrorist financing teams create and maintain documentation of individuals in process"
+          "text": "<span class=\"emphasize\">Support Underwriting and Anti-money-laundering & Counter-terrorist financing teams</span> create and maintain documentation of individuals in process"
         },
         {
-          "tags": "administration",
-          "text": "Perform various checks to ensure validity of legal agreements with customers, including signature screenings"
+          "tags": "administration organisation",
+          "text": "Perform various checks to <span class=\"emphasize\">ensure validity of legal agreements with customers, including signature screenings</span>"
         },
         {
-          "tags": "client-facing administration communication",
-          "text": "Receptionist duties - assist customers and company partners with general queries and designate specialty queries to the correct department, via phone or email"
+          "tags": "administration data-entry",
+          "text": "Update client system data on a daily basis</span>"
+        },
+        {
+          "tags": "client-facing administration communication reception",
+          "text": "<span class=\"emphasize\">Receptionist duties</span> - assist customers and company partners with general queries and designate specialty queries to the correct department, via phone or email"
         }
       ]
     }
@@ -135,11 +147,11 @@
           },
           {
             "tags": "account-management project-management client-facing communication it",
-            "text": "<span class=\"emphasize\">Facilitating communications with stakeholders</span> to define and scope out project objectives to achieve clients' goals"
+            "text": "<span class=\"emphasize\">Organising & facilitating communications with stakeholders</span> to define and scope out project objectives to achieve clients' goals"
           },
           {
             "tags": "client-facing project-management account-management communication it",
-            "text": "Create and maintain collaborative relationships with our clients, freelancers, graphic designers, back-end developers and marketers."
+            "text": "Create and <span class=\"emphasize\">maintain collaborative relationships</span> with our clients, freelancers, graphic designers, back-end developers and marketers."
           },
           {
             "tags": "project-management webdev it wordpress",
@@ -147,11 +159,23 @@
           },
           {
             "tags": "training client-facing it wordpress",
-            "text": "<span class=\"emphasize\">Provide clients with training</span> on use of <span class=\"emphasize\"></span>Wordpress CMS, third party services, online strategy and best practices"
+            "text": "<span class=\"emphasize\">Provide clients with training</span> on use of <span class=\"emphasize\">Wordpress CMS, third party services, online strategy</span> and best practices"
           },
           {
             "tags": "graphic-design psd it",
             "text": "Edit various media using <span class=\"emphasize\">Adobe Creative Suite</span> and other tools to be ready for website or marketing campaigns and content"
+          },
+          {
+            "tags": "editing content-management copy",
+            "text": "<span class=\"emphasize\">Source and edit copy</span> for online content and campaigns"
+          },
+          {
+            "tags": "reception communication client-facing",
+            "text": "Receptionist duties, including handling mail, incoming phone calls and walk-ins"
+          },
+          {
+            "tags": "organisation communication",
+            "text": "Provide regular reports on projects' status"
           },
           {
             "tags": "psd webdev it",
@@ -192,7 +216,7 @@
         "items": 
         [
           {
-            "tags": "webdev frontend ecommerce webadmin social-media it content-management",
+            "tags": "webdev frontend ecommerce webadmin social-media it content-management copy editing",
             "text": "Manage our online presence, including <span class=\"emphasize\">social media, an eCommerce website and multiple ebay stores</span>"
           },
           {
@@ -200,8 +224,8 @@
             "text": "<span class=\"emphasize\">Stock management and product placement</span> for our retail store"
           },
           {
-            "tags": "customer-service communication problem-solving it-support it",
-            "text": "Primary contact for our customers for <span class=\"emphasize\">technical consultation and IT support</span>"
+            "tags": "customer-service communication problem-solving it-support it reception",
+            "text": "Primary contact for our customers for <span class=\"emphasize\">reception, technical consultation and IT support</span>"
           },
           {
             "tags": "training communication it-support it",
@@ -216,7 +240,7 @@
       "achievements": {
         "items": [
           {
-            "tags": "msexcel bpm automation it",
+            "tags": "msexcel bpm automation it data-entry administration",
             "text": "Automated processes to <span class=\"emphasize\">reduce data entry time by over 90%</span>"
           },
           {
@@ -228,7 +252,7 @@
             "text": "<span class=\"emphasize\">Managed an outsourced website development team</span> through redevelopment of our website"
           },
           {
-            "tags": "social-media content-management media",
+            "tags": "social-media content-management media copy",
             "text": "Managed social media accounts, <span class=\"emphasize\">increasing reach by over 250%</span> with no increase in budget"
           }
         ]
@@ -256,7 +280,7 @@
             "text": "Provide <span class=\"emphasize\"></span>technical support and assistance for clients"
           },
           {
-            "tags": "client-facing communication",
+            "tags": "client-facing communication reception",
             "text": "Personelle reception and <span class=\"emphasize\"></span>security processing"
           }
         ]
@@ -264,8 +288,35 @@
       "achievements": {
         "items": [
           {
-            "tags": "webdev bpm it",
-            "text": "<span class=\"emphasize\"></span>Implemented internal website wiki to provide simpler access to a complex system of information"
+            "tags": "webdev bpm it organisation",
+            "text": "<span class=\"emphasize\">Implemented internal website</span> wiki to provide simpler access to a complex system of information"
+          },
+          {
+            "tags": "it communication editing copy",
+            "text": "<span class=\"emphasize\">Wrote induction program </span>for new clients and employees"
+          }
+        ]
+      }
+    }, 
+    {
+      "company":"Sub-Contractor",
+      "class": "field-auditor",
+      "position":"Independent Field Auditor",
+      "location":"Brisbane, AU & Bath, UK",
+      "businesstype":"Auditor",
+      "yearfrom": 2012,
+      "yearto": 2014,
+      "responsibilities": 
+      {
+        "items": 
+        [
+          {
+            "tags": "communication administration",
+            "text": "Assist firms with<span class=\"emphasize\"> national market research & consumer feedback</span>"
+          },
+          {
+            "tags": "communication administration",
+            "text": "Evaluate areas of <span class=\"emphasize\">customer service, brand compliance, employee integrity and sales processes</span>"
           }
         ]
       }
@@ -285,7 +336,7 @@
         [
           {
             "tags": "retail stock-management",
-            "text": "Taking deliveries and managing stock levels on the floor"
+            "text": "Taking deliveries and<span class=\"emphasize\"> managing stock levels</span> & facing on the floor"
           },
           {
             "tags": "retail stock-management",
@@ -301,11 +352,106 @@
         "items": [
           {
             "tags": "leadership management",
-            "text": "Offered promotion to Assistant Merchandising Manager"
+            "text": "Offered promotion to <span class=\"emphasize\">Assistant Merchandising Manager</span>"
+          },   
+          {
+            "tags": "communication retail customer-service",
+            "text": "Being part of a team that received 100% positive feedback on an independent audit"
           },   
           {
             "tags": "leadership management",
-            "text": "Gold level certification for product knowledge of Beer, Wine & Spirits"
+            "text": "<span class=\"emphasize\">Gold level certification</span> for product knowledge of Beer, Wine & Spirits"
+          }
+        ]
+      }
+    }, 
+    {
+      "company":"Bob Littler Agency",
+      "class": "bla",
+      "position":"IT Support Officer",
+      "link":"https://www.bla.com.au/",
+      "location":"Brisbane, AU",
+      "businesstype":"Distribution Warehouse",
+      "yearfrom": 2008,
+      "responsibilities": 
+      {
+        "items": 
+        [
+          {
+            "tags": "it it-admin",
+            "text": "Performing daily server back-ups ready for offsite storage"
+          },
+          {
+            "tags": "it it-admin",
+            "text": "Managing and maintaining Active directory, DNS and Email servers"
+          },
+          {
+            "tags": "it it-admin",
+            "text": "Setting up av equipment for video conferencing"
+          },
+          {
+            "tags": "it it-support",
+            "text": "Installing and Maintaining IT equipment for use for over 100 employees"
+          }
+        ]
+      },
+      "achievements": {
+        "items": [
+          {
+            "tags": "it communication",
+            "text": "Writing user friendly documentation on use of company IT software for non-IT literate employees."
+          },   
+          {
+            "tags": "it management",
+            "text": "Repairing 8 out of 11 broken company owned blackberries in spare time"
+          },   
+          {
+            "tags": "leadership it management",
+            "text": "Successfully covering for all IT Managers duties full time for a fortnight independently"
+          }
+        ]
+      }
+    }, 
+    {
+      "company":"Reds Rugby Superstore",
+      "class": "redsrugby",
+      "position":"Team Leader, Shop assistant",
+      "link":"https://shop.redsrugby.com.au/",
+      "location":"Brisbane, AU",
+      "businesstype":"Retail",
+      "yearfrom": 2008,
+      "yearto": 2009,
+      "responsibilities": 
+      {
+        "items": 
+        [
+          {
+            "tags": "it it-admin",
+            "text": "Running store from open to close independently"
+          },
+          {
+            "tags": "it it-admin",
+            "text": "Barista and duties"
+          },
+          {
+            "tags": "it it-admin",
+            "text": "Setting up av equipment for video conferencing"
+          },
+          {
+            "tags": "it it-support",
+            "text": "Installing and Maintaining IT equipment for use for over 100 employees"
+          }
+        ]
+      },
+      "achievements": {
+        "items": [
+          {
+            "tags": "it communication",
+            "text": "Leading a team to win weekly sales competitions"
+          },   
+          {
+            "tags": "it management",
+            "text": "Winning ‘sole-trader’ sales competitions"
           }
         ]
       }
@@ -325,11 +471,11 @@
         [
           {
             "tags": "leadership organisation communication",
-            "text": "Staff Leader, Counsellor, First Aid Officer and Trainer for The Siemens Science Experience annually  (2005 – 2013)"
+            "text": "<span class=\"emphasize\">Staff Leader, Counsellor, First Aid Officer and Trainer</span> for The Siemens Science Experience annually  (2005 – 2014)"
           },
           {
             "tags": "leadership event-management",
-            "text": "2nd in Charge of QUT’s Science Experience (2013, 2014)"
+            "text": "<span class=\"emphasize\">2IC</span> of QUT’s Science Experience (2013, 2014)"
           },
           {
             "tags": "it webadmin",
@@ -337,11 +483,11 @@
           },
           {
             "tags": "organisation event-management",
-            "text": "Social Coordinator for monthly events (2008-2009)"
+            "text": "<span class=\"emphasize\">Social Coordinator</span> for monthly events (2008-2009)"
           },
           {
             "tags": "content-management media",
-            "text": "Editor for quarterly magazine (2006-2007)"
+            "text": "<span class=\"emphasize\">Editor for quarterly magazine</span> (2006-2007)"
           }
         ]
       }
@@ -358,11 +504,11 @@
         [
           {
             "tags": "leadership training communication",
-            "text": "Staff Trainer and Group Leader"
+            "text": "<span class=\"emphasize\">Staff Trainer and Group Leader</span>"
           },
           {
             "tags": "media content-management",
-            "text": "Managed media for internal use and marketing material"
+            "text": "<span class=\"emphasize\">Managed media</span> for internal use and marketing material"
           }
         ]
       }
@@ -379,11 +525,11 @@
         [
           {
             "tags": "training leadership communication",
-            "text": "Training and leading a campaigning team from Brisbane to Canberra for the 2010 Make Poverty History Campaign"
+            "text": "<span class=\"emphasize\">Training and leading</span> a campaigning team from Brisbane to Canberra for the 2010 Make Poverty History Campaign"
           },
           {
             "tags": "media content-management",
-            "text": "Developing and managing a media production team for development of campaign media"
+            "text": "Developing and <span class=\"emphasize\">managing a media production team</span> for development of campaign media"
           }
         ]
       }
@@ -400,11 +546,11 @@
         [
           {
             "tags": "leadership communication event-management",
-            "text": "Leading organisation and management for bi-monthly non-profit events"
+            "text": "<span class=\"emphasize\">Leading organisation and management</span> for bi-monthly non-profit events"
           },
           {
             "tags": "leadership communication",
-            "text": "Vice-president of executive committee (2006 - 2008)"
+            "text": "<span class=\"emphasize\">Vice-president</span> of executive committee (2006 - 2008)"
           }
         ]
       }
@@ -420,7 +566,7 @@
       "yearfrom": 2009, 
       "yearto": 2013, 
       "tags": "it webdev organisation",
-      "description": "Specialisations on Web 2.0 and Mobile technologies with a core study of Networking, Website Development & User Interface design."
+      "description": "Specialisations on Web 2.0 and Mobile technologies with a core study of <span class=\"emphasize\">Networking, Website Development & User Interface design</span>"
     },
     {
       "institution": "Queensland University of Technology",
@@ -429,14 +575,24 @@
       "link":"https://www.qut.edu.au/",
       "yearfrom": 2009, 
       "yearto": 2013, 
-      "description": "Film & Interdisciplinary Majors; studies focused on online media, critical literature, production and management."
+      "description": "Film & Interdisciplinary Majors; studies focused on <span class=\"emphasize\">online media, critical literature, production and management</span>"
     }
   ],
   "certifications" : 
   [  
     {
       "institution": "Lynda.com",
-      "certifications": ["Learning Composer, the PHP Dependency Manager","Coding Faster with Emmet","Gulp.js, Git, and Browserify: Web Project Workflows","HTML5 Fundamentals","Installing Apache, MySQL, and PHP","JavaScript for Web Designers","JavaScript: Events","JavaScript: Functions","Visual Studio Code for Web Developers"],
+      "certifications": [
+        "Learning <span class=\"emphasize\">Composer</span>, the <span class=\"emphasize\">PHP</span> Dependency Manager",
+        "Coding Faster with <span class=\"emphasize\">Emmet</span>",
+        "<span class=\"emphasize\">Gulp.js, Git, and Browserify</span>: Web Project Workflows",
+        "<span class=\"emphasize\">HTML5</span> Fundamentals",
+        "Installing <span class=\"emphasize\">Apache, MySQL, and PHP</span>",
+        "<span class=\"emphasize\">JavaScript</span> for Web Designers",
+        "<span class=\"emphasize\">JavaScript</span>: Events",
+        "<span class=\"emphasize\">JavaScript</span>: Functions",
+        "<span class=\"emphasize\">Visual Studio Code</span> for Web Developers"
+      ],
       "class": "lynda",
       "link":"https://www.lynda.com/",
       "yearfrom": 2018, 
@@ -444,7 +600,12 @@
     },
     {
       "institution": "SoloLearn",
-      "certifications": ["CSS Fundamentals","HTML5 Fundamentals","JavaScript Tutorial","PHP Tutorial"],
+      "certifications": [
+        "<span class=\"emphasize\">CSS</span> Fundamentals",
+        "<span class=\"emphasize\">HTML5</span> Fundamentals",
+        "<span class=\"emphasize\">JavaScript</span> Tutorial",
+        "<span class=\"emphasize\">PHP</span> Tutorial"
+      ],
       "class": "sololearn",
       "link":"https://www.sololearn.com/",
       "yearfrom": 2018, 
@@ -452,7 +613,16 @@
     },
     {
       "institution": "Adobe",
-      "certifications": ["Adobe Certified Sales Professional, Creative Suite 6","Adobe Certified Sales Professional, Digital Publishing Suite","Adobe Certified Sales Professional, Education","Adobe Certified Sales Professional, ProVideo","Adobe Accredited Sales Specialist, Creative Cloud for Teams","Adobe Certified Sales Professional, Acrobat XI","Adobe Certified Sales Professional, Volume Licensing"],
+      "certifications": 
+      [
+        "Adobe Accredited Sales Specialist, <span class=\"emphasize\">Creative Cloud for Teams</span>",
+        "Adobe Certified Sales Professional, <span class=\"emphasize\">Creative Suite 6</span>",
+        "Adobe Certified Sales Professional, <span class=\"emphasize\">Digital Publishing Suite</span>",
+        "Adobe Certified Sales Professional, <span class=\"emphasize\">Education</span>",
+        "Adobe Certified Sales Professional, <span class=\"emphasize\">ProVideo</span>",
+        "Adobe Certified Sales Professional, <span class=\"emphasize\">Acrobat XI</span>",
+        "Adobe Certified Sales Professional, <span class=\"emphasize\">Volume Licensing</span>"
+      ],
       "class": "adobe",
       "link":"https://training.adobe.com/training/courses.html",
       "yearfrom": 2013, 
@@ -461,7 +631,9 @@
     },
     {
       "institution": "Mental Health Training Australia",
-      "certifications": ["Youth Mental Health First Aid"],
+      "certifications": [
+        "<span class=\"emphasize\">Youth Mental Health First Aid"
+      ],
       "class": "mentalhealthfirstaid",
       "link":"http://www.mhta.com.au/",
       "yearfrom": 2012, 
@@ -469,11 +641,62 @@
     },
     {
       "institution": "Wide Bay TAFE",
-      "certifications": ["Cert III, IV in Music"],
+      "certifications": [
+        "Cert III, IV in Music"
+      ],
       "class": "musicCert",
       "link":"http://www.tafeeastcoast.edu.au/",
       "yearfrom": 2007, 
       "tags": "music"
+    }
+  ],
+  "references" : 
+  [  
+    {
+      "referee": "Alex Wood",
+      "class": "awood",
+      "position": "Managing Director",
+      "company": "Zonkey",
+      "relationship": "Employer",
+      "number": "+44 1225 667977",
+      "email": "alex@zonkey.co.uk"
+    },
+    {
+      "referee": "Jon Curle",
+      "class": "jcurle",
+      "position": "Director",
+      "company": "Zonkey",
+      "relationship": "Employer",
+      "number": "+44 1225 667977",
+      "email": "jon@zonkey.co.uk"
+    },
+    {
+      "referee": "Michael Tran",
+      "class": "mtran",
+      "position": "CTO",
+      "company": "Digital Sense",
+      "relationship": "Manager",
+      "number": "0403530056",
+      "email": "michael@digitalsense.com.au"
+    }
+  ],
+  "skills" : 
+  [  
+    {
+      "class": "all-skills",
+      "skills": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "SASS",
+        "Gulp",
+        "NPM",
+        "VS Code",
+        "Microsoft Office",
+        "Mustache",
+        "Handlebars",
+        "Wordpress"
+      ]
     }
   ]
 }

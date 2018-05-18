@@ -15,6 +15,8 @@ var cleanCSS = require('gulp-clean-css')
 var wrap = require('gulp-wrap')
 var declare = require('gulp-declare')
 const autoprefixer = require('gulp-autoprefixer')
+var sourcemaps = require('gulp-sourcemaps')
+const babel = require('gulp-babel')
 
 var themeDirectory = '../themes/underscores-child/'
 var sources =
@@ -57,7 +59,9 @@ gulp.task('browser-sync', function () {
 
 gulp.task('sass', function () {
   return gulp.src(sources.sass)
+    // .pipe(sourcemaps.init)
     .pipe(sass({sourceComments: true}).on('error', sass.logError))
+    // .pipe(sourcemaps.write('.'))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
@@ -77,6 +81,9 @@ gulp.task('js', function () {
   return gulp.src(sources.js)
     .pipe(concat('script.js'))
     .pipe(browserify())
+    // .pipe(babel({
+    //   presets: ['env']
+    // }))
     .pipe(gulp.dest(paths.jsDev))
     .pipe(jsminify())
     .pipe(gulp.dest(paths.jsDist))

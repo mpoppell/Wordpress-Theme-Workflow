@@ -14,8 +14,9 @@ $(function () {
         // Grabs tags from json file
         var dataKeys = ['responsibilities', 'achievements']
         // adds relevent classes to cv items and returns array of tags used
-        var employerTags = cvTagClassManager(file, dataKeys, key)
-        allTags = allTags.concat(employerTags)
+        var cvTags = cvTagClassManager(file, dataKeys, key)
+        allTags = allTags.concat(cvTags)
+        console.log('tags for ' + key + ': ' + allTags)
       })
       // removes duplicate tags and sorts alphabetically
       var uniqTags = uniqArray(allTags).sort()
