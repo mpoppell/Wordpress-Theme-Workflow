@@ -16,15 +16,16 @@ var wrap = require('gulp-wrap')
 var declare = require('gulp-declare')
 const autoprefixer = require('gulp-autoprefixer')
 var sourcemaps = require('gulp-sourcemaps')
-const babel = require('gulp-babel')
+var babel = require('gulp-babel')
 
-var themeDirectory = '../themes/underscores-child/'
+var themeDirectory = '../themes/understrap-child-master/'
+var devThemeDirectory = 'themes/understrap/'
 var sources =
   {
     'sass': 'sass/*.scss',
     'js': ['js/handlebars.js'],
     'json': ['js/employers.json', 'js/keyDict.json'],
-    'phpDev': ['themes/*.php'],
+    'phpDev': [devThemeDirectory + '*.php'],
     'css': [themeDirectory + '*.css'],
     'handlebars': ['js/templates/*.hbs'],
     'bootstrapPackageScss': 'node_modules/bootstrap/scss/**',
@@ -80,10 +81,10 @@ gulp.task('bootstrapUnpackage', function () {
 gulp.task('js', function () {
   return gulp.src(sources.js)
     .pipe(concat('script.js'))
+		.pipe(babel({
+  presets: ['env']
+}))
     .pipe(browserify())
-    // .pipe(babel({
-    //   presets: ['env']
-    // }))
     .pipe(gulp.dest(paths.jsDev))
     .pipe(jsminify())
     .pipe(gulp.dest(paths.jsDist))
@@ -99,7 +100,6 @@ gulp.task('json', function () {
 
 gulp.task('handlebars', function () {
   return gulp.src(sources.handlebars)
-    .pipe(gulp.dest(paths.handlebars))
     .pipe(handlebars())
     .pipe(wrap('Handlebars.template(<%= contents %>)'))
     .pipe(declare({

@@ -2,6 +2,7 @@
 var $ = require('jquery')
 
 // TODO: add year filter
+// TODO: use aria controls
 
 $(function () {
   $.getJSON('/wordpress/wp-content/themes/underscores-child/js/employers.json', function (data) {
@@ -16,7 +17,6 @@ $(function () {
         // adds relevent classes to cv items and returns array of tags used
         var cvTags = cvTagClassManager(file, dataKeys, key)
         allTags = allTags.concat(cvTags)
-        console.log('tags for ' + key + ': ' + allTags)
       })
       // removes duplicate tags and sorts alphabetically
       var uniqTags = uniqArray(allTags).sort()
@@ -31,6 +31,7 @@ $(function () {
     $('#cv-toggles').append('<button class="btn btn-primary btn-success all">No Filters</button>')
 
     $.each(data, function (key, value) {
+      key = 'cv-' + key
       // creates the tag buttons
       $('#cv-toggles').append('<a href="#" class="' + key +
       '">' + value + '</a>')
@@ -67,7 +68,11 @@ $(function () {
   }
 
   function addTagClasses (array, selector) {
-    $(selector).addClass(array)
+    var cvArray = []
+    for (var entry in array) {
+      cvArray.push('cv-' + array[entry])
+    }
+    $(selector).addClass(cvArray)
   }
 
   function tagDictionary (keyArray, keyDict) {
@@ -100,12 +105,16 @@ $(function () {
             var newTags = file[cvType][objectKey].items[itemsArray].tags.split(' ')
             // adds new tags to array
             itemTags = itemTags.concat(newTags)
+            var listSelectorClass = cvTypeItemSelectorClass + ' .' + objectKey + ' li:nth-child(' + (parseInt(itemsArray) + 1) + ')'
+            console.log(newTags)
+            console.log(listSelectorClass)
+            addTagClasses(newTags, listSelectorClass)
           }
         }
         // creates selector class based on employer class and the datakeys
         var tagsSelectorClass = cvTypeItemSelectorClass + ' .' + objectKey
         // creates list of all unique tags used for data key
-        var uniqItemTags = uniqArray(itemTags).join(' ')
+        var uniqItemTags = uniqArray(itemTags)
         addTagClasses(uniqItemTags, tagsSelectorClass)
         // concatenates all available tags
         cvTypeSingleTags = cvTypeSingleTags.concat(itemTags)
@@ -115,7 +124,7 @@ $(function () {
         cvTypeSingleTags = cvTypeSingleTags.concat(cvItemTags)
       }
       // removes duplicate tags and turns into string
-      var uniqCvTypeTags = uniqArray(cvTypeSingleTags).join(' ')
+      var uniqCvTypeTags = uniqArray(cvTypeSingleTags)
       // adds classes to the cv types selector class
       addTagClasses(uniqCvTypeTags, cvTypeItemSelectorClass)
       allCvTypeTags = allCvTypeTags.concat(cvTypeSingleTags)
@@ -123,7 +132,7 @@ $(function () {
     // creates class for selecting the cv typre container
     var cvTypeSelectorClass = '.cv-type-container.' + key
     // removes duplicate tags and turns into string
-    var uniqAllCvTypeTags = uniqArray(allCvTypeTags).join(' ')
+    var uniqAllCvTypeTags = uniqArray(allCvTypeTags)
 
     addTagClasses(uniqAllCvTypeTags, cvTypeSelectorClass)
     return allCvTypeTags

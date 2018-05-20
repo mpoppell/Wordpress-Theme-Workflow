@@ -7,7 +7,7 @@
     <div id="cv-employers" class="cv-type-container employers"> 
       <h3>Employment History</h3>
       {{#employers}}
-        <div class="cv-item employer row {{class}}">
+        <div class="cv-item employer row {{#class}}cv-{{.}}{{/class}}">
           <div class="short-info col-md-4 col-xl-3">
             <div class="row">
               <div class="col-sm-6 col-md-12">
@@ -50,7 +50,7 @@
                 <h5>Responsibilities</h5>
                 <ul>
                   {{#items}}
-                    <li class="{{tags}}">{{{text}}}</li>
+                    <li class="">{{{text}}}</li>
                   {{/items}}
                 </ul>
               </div>
@@ -60,7 +60,7 @@
                 <h5>Achievements</h3>
                 <ul>
                   {{#items}}
-                    <li class="{{tags}}">{{{text}}}</li>
+                    <li class="">{{{text}}}</li>
                   {{/items}}
                 </ul>
               </div>

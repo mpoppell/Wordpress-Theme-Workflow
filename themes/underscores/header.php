@@ -64,7 +64,7 @@
 		</div><!-- .row -->
 		</div><!-- .container -->
 	</header><!-- #masthead -->
-	<div class="container">
+	<div class="container px-4 px-sm-0">
 		<header class="entry-header">
 				<?php
 				if ( is_singular() ) :
